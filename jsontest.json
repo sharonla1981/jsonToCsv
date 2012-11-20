@@ -1,0 +1,7 @@
+{"users":[
+{"CI":"game_log","PM":"Galaxy Nexus","IM":"424021441993088","AV":"1.4.6","PK":"Ninja_Chicken","OV":"4.0.2","LL":"INFO","TS":"1338263142521","MS":"track/game_Ninja_Chicken/custom/LoadingScreenPromotion/Displayed/Ninja_Chicken_Ooga_Booga"},
+{"CI":"game_log","PM":"Galaxy Nexus","IM":"424021441993088","AV":"1.4.6","PK":"Ninja_Chicken","OV":"4.0.2","LL":"INFO","TS":"1338263145710","MS":"track/game_Ninja_Chicken/custom/AdDisplay/LevelSelection"},
+{"CI":"game_log","PM":"Galaxy Nexus","IM":"424021441993088","AV":"1.4.6","PK":"Ninja_Chicken","OV":"4.0.2","LL":"INFO","TS":"1338263182794","MS":"track/game_Ninja_Chicken/custom/Level 28.00/Started"},
+{"CI":"game_log","PM":"Galaxy Nexus","IM":"424021441993088","AV":"1.4.6","PK":"Ninja_Chicken","OV":"4.0.2","LL":"INFO","TS":"1338263182876","MS":"track/game_Ninja_Chicken/custom/AdDisplay/Started/Level28.00"},
+{"CI":"game_log","PM":"GT-I9100","IM":"222995304814089","AV":"1.1.2","PK":"Ninja_Chicken_Ooga_Booga","OV":"2.3.5","LL":"INFO","TS":1338274714983,"MS":"track/game_Ninja_Chicken_Ooga_Booga/custom/Level 17/Failed/MissionMode"}
+]}

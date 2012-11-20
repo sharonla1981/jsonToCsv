@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Demo - Covnert JSON to CSV</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="json2.js"></script>
+
+    <script type="text/javascript">
+        // JSON to CSV Converter
+        function ConvertToCSV(objArray) {
+            var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+            var str = '';
+
+            for (var i = 0; i < array.length; i++) {
+                var line = '';
+                for (var index in array[i]) {
+                    if (line != '') line += ';'
+
+                    line += array[i][index];
+                }
+
+                str += line + '\r\n';
+            }
+
+            return str;
+        }
+
+        // Example
+        $(document).ready(function () {
+			//var items = [];
+			$.ajax({
+				url: "jsontest.json",
+				dataType: "json",
+				success: function(data) {
+					//var items = [];
+					items = data;
+					var cols = "";
+					
+					//var users = data.users;
+					
+							for(key in data.users[0]) {
+								cols += key + ";";
+							}
+					
+					
+					var jsonObject = JSON.stringify(items.users);
+
+					// Display JSON
+					$('#json').text(jsonObject);
+						
+					// Convert JSON to CSV & Display CSV
+					$('#csvCols').text(cols);
+					$('#csv').text(ConvertToCSV(jsonObject));
+				},
+				complete: function(){
+					//alert("test");
+				},
+				error: function(e){
+					
+				}
+			
+			
+			});
+			/*
+			$.getJSON('jsontest.txt',function(data) {
+				alert("test");
+				//items = data;
+				})
+			*/
+            // Create Object
+            /*var items = [
+                  { name: "Item 1", color: "Green", size: "X-Large" },
+                  { name: "Item 2", color: "Green", size: "X-Large" },
+                  { name: "Item 3", color: "Green", size: "X-Large" }];
+			*/
+            // Convert Object to JSON
+			
+            
+        });
+    </script>
+</head>
+<body>
+    <h1>
+        JSON</h1>
+    <pre id="json"></pre>
+    <h1>
+        CSV</h1>
+	<pre id="csvCols"></pre>
+    <pre id="csv"></pre>
+</body>
+</html>
